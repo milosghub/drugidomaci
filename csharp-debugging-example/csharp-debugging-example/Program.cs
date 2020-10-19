@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace csharp_debugging_example
 {
@@ -6,7 +7,15 @@ namespace csharp_debugging_example
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            List<Student> listaStudenata = new LinkedList<Student>()
+            {
+            new Student("1", "Milan Novakovic", new Department("RI"));
+            new Student("2", "Nikola Milanovic", new Department("IT"));
+            new Student("3", "Milos Milosevic", new Department("IT"));
+
+            for (int i = 0; i < listaStudenata.Count; i++)
+                Console.WriteLine(listaStudenata[1].ToString);
+            }
         }
     }
 }
