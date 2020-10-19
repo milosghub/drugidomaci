@@ -8,13 +8,14 @@ namespace csharp_debugging_example
     {
         string Title;
         string Code;
+
         public Department(string code)
         {
-            if (code.Equals("IT"))
-                Title = "Informacione tehnologije";
-            else if (code.Equals("RI")
-                Title = "Racunarska tehnika";
-                
+
+            if (code.Equals("IT")) Title = "Informacione tehnologije";
+            else if (code.Equals("RI")) Title = "Racunarska tehnika";
+
         }
+        public string Title_ { get { return Title; } }
     }
 }

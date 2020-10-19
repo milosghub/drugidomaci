@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
 namespace csharp_debugging_example
@@ -8,19 +7,24 @@ namespace csharp_debugging_example
     class Student
     {
         string Name;
-        string IdNumber;
-        Department Department;
+        string idNamber;
+        Department department;
 
-        public Student (string name, string Idnumber, Department department)
+        public Student(string idNamber, string name, Department department)
         {
+            this.idNamber = idNamber;
             this.Name = name;
-            this.IdNumber = Idnumber;
-            this.Department = Department;
-
-            Public string toString()
-            {
-                return "<" +this.Name+ ">" + "-" + "<" + this.IdNumber+ ">" + "-" + "<" +this.Department+ ">";
-            }
+            this.department = department;
         }
+        public string ToString()
+        {
+            return
+                "<" + this.Name + ">" + " -" + " <" + this.idNamber + ">" + " -" + "< " +
+            this.department.Title_ + ">";
+
+        }
+
+
+
     }
 }
